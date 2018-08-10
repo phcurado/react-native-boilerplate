@@ -1,15 +1,14 @@
-/**
- * @flow
- */
-
 import React, { Component } from 'react';
 import { Text, View, Button } from 'react-native';
-
+import navigationScreen from '../hoc/navigationScreen';
 class HomeScreen extends Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
         return (
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Text>Home Screen</Text>
+                <Text />
                 <Button
                     title="Go to Details"
                     onPress={() => this.props.navigation.navigate('DetailsScreen')}
@@ -19,4 +18,4 @@ class HomeScreen extends Component {
     }
 }
 
-export default HomeScreen;
+export default navigationScreen({ title: 'Home' })(HomeScreen);
