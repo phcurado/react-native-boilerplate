@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Button } from 'react-native';
+import { Container, Button, Text } from 'native-base';
 import navigationScreen from '../hoc/navigationScreen';
 class HomeScreen extends Component {
     constructor(props) {
@@ -7,13 +7,11 @@ class HomeScreen extends Component {
     }
     render() {
         return (
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Text />
-                <Button
-                    title="Go to Details"
-                    onPress={() => this.props.navigation.navigate('DetailsScreen')}
-                />
-            </View>
+            <Container style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                <Button onPress={() => this.props.navigation.navigate('DetailsScreen')}>
+                    <Text>Button</Text>
+                </Button>
+            </Container>
         );
     }
 }
