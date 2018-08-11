@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Button, Container, Content, Text } from 'native-base';
 import navigationScreen from '../hoc/navigationScreen';
 import CounterStore from '../Stores/CounterStore';
-import { observer } from 'mobx-react';
+import { inject, observer } from 'mobx-react';
+@inject('CounterStore')
 @observer
 class HomeScreen extends Component {
     constructor(props) {
@@ -18,6 +19,8 @@ class HomeScreen extends Component {
                         justifyContent: 'center'
                     }}
                 >
+                    <Text>Double counter</Text>
+                    <Text>{this.props.CounterStore.doubleCounter}</Text>
                     <Button onPress={() => this.props.navigation.navigate('DetailsScreen')}>
                         <Text>Go to Details</Text>
                         <Text>{CounterStore.counter}</Text>

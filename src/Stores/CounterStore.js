@@ -1,12 +1,21 @@
-import { observable } from 'mobx';
+import { action, computed, observable } from 'mobx';
 class CounterStore {
     @observable
     counter = 0;
-    increment() {
+
+    @action
+    increment = () => {
         this.counter++;
-    }
-    decrement() {
+    };
+
+    @action
+    decrement = () => {
         this.counter--;
+    };
+
+    @computed
+    get doubleCounter() {
+        return this.counter * 2;
     }
 }
 export default new CounterStore();
