@@ -5,10 +5,10 @@
 import React, { Component } from 'react';
 import RootStack from './navigation/navigation';
 import { Provider } from 'mobx-react';
-import CounterStore from './Stores/CounterStore';
+import RootStore from './Stores/';
 
 const Root = (
-    <Provider CounterStore={CounterStore}>
+    <Provider rootStore={new RootStore()}>
         <RootStack />
     </Provider>
 );

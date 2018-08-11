@@ -3,6 +3,10 @@ class CounterStore {
     @observable
     counter = 0;
 
+    constructor(rootStore) {
+        this.rootStore = rootStore;
+    }
+
     @action
     increment = () => {
         this.counter++;
@@ -18,4 +22,4 @@ class CounterStore {
         return this.counter * 2;
     }
 }
-export default new CounterStore();
+export default CounterStore;
