@@ -1,14 +1,8 @@
 import React from 'react';
-
 import { Header, Container, Text } from 'native-base';
+import { StyleSheet } from 'react-native';
 
-const CustomHeader = ({ title }) => (
-    <Header style={styles.header}>
-        <Container>
-            <Text style={styles.title}>{title}</Text>
-        </Container>
-    </Header>
-);
+const CustomHeader = ({ title }) => <Text style={styles.title}>{title}</Text>;
 
 export default CustomHeader;
 

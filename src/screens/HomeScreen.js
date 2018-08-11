@@ -10,7 +10,7 @@ class HomeScreen extends Component {
     }
     render() {
         return (
-            <Container>
+            <Container style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                 <Content
                     contentContainerStyle={{
                         flex: 1,
