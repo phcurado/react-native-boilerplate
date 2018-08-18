@@ -4,9 +4,9 @@ import { Icon } from 'native-base';
 import * as HomeTab from '../screens/HomeTab';
 import * as DetailsTab from '../screens/DetailsTab';
 
-const HomeStack = createStackNavigator({ ...HomeTab });
+const HomeStack = createStackNavigator({ Home: HomeTab.HomeScreen });
 
-const DetailsStack = createStackNavigator({ ...DetailsTab });
+const DetailsStack = createStackNavigator({ Details: DetailsTab.DetailsScreen });
 
 const RootStack = createBottomTabNavigator(
     { Home: HomeStack, Details: DetailsStack },

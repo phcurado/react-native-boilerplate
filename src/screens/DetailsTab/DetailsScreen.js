@@ -14,10 +14,10 @@ class DetailsScreen extends Component {
                     }}
                 >
                     <Text>Details Screen</Text>
-                    <Button block onPress={() => this.props.navigation.push('DetailsScreen')}>
+                    <Button block onPress={() => this.props.navigation.push('Details')}>
                         <Text>Go to Details</Text>
                     </Button>
-                    <Button block onPress={() => this.props.navigation.navigate('HomeScreen')}>
+                    <Button block onPress={() => this.props.navigation.navigate('Home')}>
                         <Text>Go to Home</Text>
                     </Button>
                     <Button block onPress={() => this.props.navigation.goBack()}>

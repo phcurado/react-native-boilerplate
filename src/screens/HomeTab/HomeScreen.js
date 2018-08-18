@@ -22,7 +22,7 @@ class HomeScreen extends Component {
                 >
                     <Text>Double counter</Text>
                     <Text>{this.props.rootStore.counterStore.doubleCounter}</Text>
-                    <Button onPress={() => this.props.navigation.navigate('DetailsScreen')}>
+                    <Button onPress={() => this.props.navigation.navigate('Details')}>
                         <Text>Go to Details</Text>
                         <Text>{this.props.rootStore.counterStore.counter}</Text>
                     </Button>
