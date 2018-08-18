@@ -1,4 +1,4 @@
-import HomeScreen from './HomeScreen';
-import DetailsScreen from './DetailsScreen';
+import HomeTab from './HomeTab';
+import DetailsTab from './DetailsTab';
 
-export { HomeScreen, DetailsScreen };
+export { HomeTab, DetailsTab };

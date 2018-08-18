@@ -4,8 +4,8 @@ import CustomHeader from '../Components/CustomHeader';
 const navigationScreen = ({ title }) => WrappedScreen => {
     return class extends Component {
         static navigationOptions = {
-            title: title,
-            headerTitle: <CustomHeader title={title} />
+            title: title
+            //headerTitle: <CustomHeader title={title} />
         };
 
         constructor(props) {

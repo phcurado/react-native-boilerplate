@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Button, Container, Content, Text } from 'native-base';
-import navigationScreen from '../hoc/navigationScreen';
-import RootStore from '../Stores/';
+import navigationScreen from '../../hoc/navigationScreen';
+import RootStore from '../../Stores/';
 import { inject, observer } from 'mobx-react';
+
 @inject('rootStore')
 @observer
 class HomeScreen extends Component {

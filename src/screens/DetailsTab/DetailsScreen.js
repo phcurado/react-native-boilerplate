@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Container, Content, Text } from 'native-base';
-import navigationScreen from '../hoc/navigationScreen';
+import navigationScreen from '../../hoc/navigationScreen';
 
 class DetailsScreen extends Component {
     render() {
