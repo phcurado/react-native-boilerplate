@@ -2,8 +2,7 @@ import React from 'react';
 import { Text, Footer, FooterTab, Button, Icon } from 'native-base';
 
 const CustomFooter = props => {
-    console.log('hello');
-    console.log(props.navigation.state);
+    const icons = ['home', 'apps'];
     return (
         <Footer>
             <FooterTab>
@@ -13,7 +12,7 @@ const CustomFooter = props => {
                         key={route.key}
                         onPress={() => props.navigation.navigate(route.routeName)}
                     >
-                        <Icon active={props.navigation.state.index === index} name="apps" />
+                        <Icon active={props.navigation.state.index === index} name={icons[index]} />
                         <Text>{route.routeName}</Text>
                     </Button>
                 ))}
