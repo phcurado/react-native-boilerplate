@@ -7,33 +7,27 @@ import { inject, observer } from 'mobx-react';
 @inject('rootStore')
 @observer
 class LoginScreen extends Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
-            <Container>
-                <Content>
-                    <Form>
-                        <Item floatingLabel>
-                            <Label>Username</Label>
-                            <Input />
-                        </Item>
-                        <Item floatingLabel last>
-                            <Label>Password</Label>
-                            <Input />
-                        </Item>
-                        <Button
-                            block
-                            onPress={() => this.props.navigation.navigate('BottomNavigatorStack')}
-                        >
-                            <Text>Click Me!</Text>
-                        </Button>
-                    </Form>
-                </Content>
-            </Container>
+            <Form>
+                <Item floatingLabel>
+                    <Label>Username</Label>
+                    <Input />
+                </Item>
+                <Item floatingLabel last>
+                    <Label>Password</Label>
+                    <Input />
+                </Item>
+                <Button
+                    style={{ marginTop: 20 }}
+                    block
+                    onPress={() => this.props.navigation.navigate('BottomNavigatorStack')}
+                >
+                    <Text>Click Me!</Text>
+                </Button>
+            </Form>
         );
     }
 }
 
-export default LoginScreen;
+export default navigationScreen()(LoginScreen);

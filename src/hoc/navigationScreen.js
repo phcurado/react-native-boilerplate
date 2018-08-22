@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
+import { Button, Container, Header, Content, Form, Item, Input, Label, Text } from 'native-base';
 import CustomHeader from '../Components/navigation/CustomHeader';
 
-const navigationScreen = ({ title }) => WrappedScreen => {
+const navigationScreen = props => WrappedScreen => {
     return class extends Component {
-        static navigationOptions = {
-            title: title
-            //headerTitle: <CustomHeader title={title} />
-        };
-
         constructor(props) {
             super(props);
         }
 
         render() {
-            return <WrappedScreen {...this.props} />;
+            return (
+                <Content style={{ marginLeft: 20, marginRight: 20 }}>
+                    <WrappedScreen {...this.props} />
+                </Content>
+            );
         }
     };
 };
