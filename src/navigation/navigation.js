@@ -1,48 +1,32 @@
 import React from 'react';
-import { createBottomTabNavigator, createStackNavigator } from 'react-navigation';
-import { Icon } from 'native-base';
+import {
+    createBottomTabNavigator,
+    createStackNavigator,
+    createSwitchNavigator
+} from 'react-navigation';
+import CustomFooter from '../Components/navigation/CustomFooter';
+import * as LoginPages from '../screens/LoginPages';
 import * as HomeTab from '../screens/HomeTab';
 import * as DetailsTab from '../screens/DetailsTab';
 
+const LoginStack = createStackNavigator({ Login: LoginPages.LoginScreen });
 const HomeStack = createStackNavigator({ Home: HomeTab.HomeScreen });
-
 const DetailsStack = createStackNavigator({ Details: DetailsTab.DetailsScreen });
 
-const RootStack = createBottomTabNavigator(
-    { Home: HomeStack, Details: DetailsStack },
+const BottomNavigatorStack = createBottomTabNavigator(
+    {
+        Home: HomeStack,
+        Details: DetailsStack
+    },
     {
         initialRouteName: 'Home',
-        navigationOptions: ({ navigation }) => {
-            const { routeName } = navigation.state;
-            let iconName;
-            if (routeName === 'Home') {
-                iconName = 'home';
-            } else {
-                iconName = 'refresh';
-            }
-            return {
-                tabBarIcon: ({ focused, tintColor }) => {
-                    return (
-                        <Icon style={{ color: focused ? '#6200EE' : '#555555' }} name={iconName} />
-                    );
-                }
-            };
-        },
-        tabBarOptions: {
-            activeTintColor: '#6200EE',
-            inactiveTintColor: '#555555',
-            style: {
-                height: 60,
-                paddingVertical: 5,
-                backgroundColor: '#fff'
-            },
-            labelStyle: {
-                fontSize: 12,
-                lineHeight: 20,
-                fontFamily: 'CircularStd-Book'
-            }
-        }
+        tabBarComponent: props => <CustomFooter {...props} />
     }
 );
+
+const RootStack = createSwitchNavigator({
+    LoginStack,
+    BottomNavigatorStack
+});
 
 export default RootStack;

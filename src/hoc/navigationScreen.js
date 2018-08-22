@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CustomHeader from '../Components/CustomHeader';
+import CustomHeader from '../Components/navigation/CustomHeader';
 
 const navigationScreen = ({ title }) => WrappedScreen => {
     return class extends Component {
