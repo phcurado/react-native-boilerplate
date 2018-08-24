@@ -15,4 +15,4 @@ It's recommended to turn on format-on-save by scoping the setting:
     "editor.formatOnSave": true
 }
 ```
-To run this project you should install de dependencies with ```yarn install``` and run with ```react-native run-android``` or ```react-native run-ios```
+To run this project you should install de dependencies with ```yarn install``` and run with ```yarn android``` or ```yarn ios```

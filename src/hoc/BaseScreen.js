@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Button, Container, Header, Content, Form, Item, Input, Label, Text } from 'native-base';
 import CustomHeader from '../Components/navigation/CustomHeader';
 
-const navigationScreen = props => WrappedScreen => {
+const BaseScreen = props => WrappedScreen => {
     return class extends Component {
         constructor(props) {
             super(props);
@@ -18,4 +18,4 @@ const navigationScreen = props => WrappedScreen => {
     };
 };
 
-export default navigationScreen;
+export default BaseScreen;

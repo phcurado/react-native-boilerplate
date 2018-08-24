@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Content, Text } from 'native-base';
-import navigationScreen from '../../hoc/navigationScreen';
+import BaseScreen from '../../hoc/BaseScreen';
 import RootStore from '../../Stores/';
 import { inject, observer } from 'mobx-react';
 
@@ -45,4 +45,4 @@ class HomeScreen extends Component {
     }
 }
 
-export default navigationScreen()(HomeScreen);
+export default BaseScreen()(HomeScreen);

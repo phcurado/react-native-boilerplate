@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Content, Text } from 'native-base';
-import navigationScreen from '../../hoc/navigationScreen';
+import BaseScreen from '../../hoc/BaseScreen';
 
 class DetailsScreen extends Component {
     render() {
@@ -29,4 +29,4 @@ class DetailsScreen extends Component {
     }
 }
 
-export default navigationScreen()(DetailsScreen);
+export default BaseScreen()(DetailsScreen);
