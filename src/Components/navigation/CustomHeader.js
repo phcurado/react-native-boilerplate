@@ -1,21 +1,10 @@
 import React from 'react';
-import {
-    Body,
-    Button,
-    Container,
-    Header as NativeHeader,
-    Icon,
-    Left,
-    Text,
-    Title,
-    Right
-} from 'native-base';
+import { Body, Button, Container, Header, Icon, Left, Text, Title, Right } from 'native-base';
 import { StyleSheet } from 'react-native';
-import { Header } from 'react-navigation';
 
 const CustomHeader = props => {
     return (
-        <NativeHeader>
+        <Header>
             {props.navigation.state.index > 0 ? (
                 <Left>
                     <Button transparent onPress={() => props.navigation.pop()}>
@@ -30,7 +19,7 @@ const CustomHeader = props => {
                 </Title>
             </Body>
             <Right />
-        </NativeHeader>
+        </Header>
     );
 };
 export default CustomHeader;
